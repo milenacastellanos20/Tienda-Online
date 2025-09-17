@@ -43,4 +43,5 @@ public class Electronico extends Producto{
         super.mostrarDetalles();
         System.out.println(this.toString());
     }
+
 }

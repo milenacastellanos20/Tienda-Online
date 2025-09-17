@@ -21,6 +21,7 @@ public class Inventario{
     public void insertarElectronico() {
         System.out.println("id: ");
         int idElectronico = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("nombre: ");
         String nombreElectronico = sc.nextLine();
@@ -30,6 +31,7 @@ public class Inventario{
 
         System.out.println("stock: ");
         int stockElectronico = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("marca: ");
         String marcaElectronico = sc.nextLine();
@@ -44,6 +46,7 @@ public class Inventario{
     public void insertarRopa() {
         System.out.println("id: ");
         int idRopa = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("nombre: ");
         String nombreRopa = sc.nextLine();
@@ -53,6 +56,7 @@ public class Inventario{
 
         System.out.println("stock: ");
         int stockRopa = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("talla: ");
         Tallas tallaRopa = Tallas.valueOf(sc.next());

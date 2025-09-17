@@ -57,4 +57,6 @@ public abstract class Producto {
     }
 
     public abstract double calcularPrecio();
+
+    //TODO implementa la interfaz en producto y desarrolla los metodos para cada hijo
 }
