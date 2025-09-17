@@ -19,7 +19,7 @@ public class Inventario{
     }
 
     public void insertarElectronico() {
-        System.out.println("id: ");
+        System.out.println("introduce id: ");
         int idElectronico = sc.nextInt();
         sc.nextLine();
 
@@ -41,13 +41,14 @@ public class Inventario{
 
         Electronico electronico = new Electronico(idElectronico, nombreElectronico, precioElectronico, stockElectronico, marcaElectronico, garantiaElectronico);
         productos.add(electronico);
+        System.out.println("Producto añadido correctamente");
     }
 
     public void insertarRopa() {
         System.out.println("id: ");
         int idRopa = sc.nextInt();
         sc.nextLine();
-
+        sc.nextLine();
         System.out.println("nombre: ");
         String nombreRopa = sc.nextLine();
 
@@ -57,7 +58,7 @@ public class Inventario{
         System.out.println("stock: ");
         int stockRopa = sc.nextInt();
         sc.nextLine();
-
+        sc.nextLine();
         System.out.println("talla: ");
         Tallas tallaRopa = Tallas.valueOf(sc.next());
 
@@ -66,6 +67,7 @@ public class Inventario{
 
         Ropa ropa = new Ropa(idRopa, nombreRopa, precioRopa, stockRopa, tallaRopa, materialRopa);
         productos.add(ropa);
+        System.out.println("Producto añadido correctamente");
     }
 
     public void mostrarInventario() {

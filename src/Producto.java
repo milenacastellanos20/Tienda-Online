@@ -1,4 +1,6 @@
-public abstract class Producto {
+import java.io.Serializable;
+
+public abstract class Producto{
 
     private int id;
     private String nombre;
@@ -58,5 +60,5 @@ public abstract class Producto {
 
     public abstract double calcularPrecio();
 
-    //TODO implementa la interfaz en producto y desarrolla los metodos para cada hijo
+    //TODO implementa la interfaz en producto y desarrolla los metodos para cada hijo, pero me parece innecesario porque ya tengo unos metodos para eso
 }

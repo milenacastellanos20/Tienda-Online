@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
 public class AppTienda {
-     static void main(String[] args) throws Exception{
+     static void main(String[] args) {
          Scanner sc = new Scanner(System.in);
          int menu = 0;
          int opcion = 0;
          int id = 0;
          int cantidad = 0;
-
+         int i;
          Inventario inventario = new Inventario();
 
       try {
           do {
-                  System.out.println("Bienvenido a Tienda...");
+              System.out.println("Bienvenido a Tienda...");
 
                   System.out.println("1. Añadir productos al inventario");
                   System.out.println("2. Vender productos, actualizando la cantidad en stock");
@@ -29,12 +29,12 @@ public class AppTienda {
                           opcion = sc.nextInt();
                           if (opcion == 1) {
                               inventario.insertarElectronico();
-                          } else if (opcion == 2) {
+                          }  else if (opcion == 2) {
                               inventario.insertarRopa();
                           } else {
-                              throw new Exception();
+                              throw new Exception("Opcion invalida");
                           }
-
+                          break; //para que se repita el menu, sino los case siguen una secuencia
                       case 2:
                           System.out.println("Indique el id del producto: ");
                           id = sc.nextInt();
@@ -42,7 +42,7 @@ public class AppTienda {
                           cantidad = sc.nextInt();
 
                           inventario.vender(id, cantidad);
-
+                          break;
                       case 3:
                           System.out.println("Indique el id del producto: ");
                           id = sc.nextInt();
@@ -50,20 +50,16 @@ public class AppTienda {
                           cantidad = sc.nextInt();
 
                           inventario.reponer(id, cantidad);
-
+                          break;
                       case 4:
                           inventario.mostrarInventario();
-
+                          break;
                   }
 
-                  if (menu < 1 || menu > 5) {
-                      System.out.println("Opcion no permitida");
-                  }
-
-          }while (menu != 5);
+          }while (menu > 0 && menu < 5);
 
       } catch (Exception e) {
-          throw new Exception();
+          throw new RuntimeException(e);
       }
     }
 }
