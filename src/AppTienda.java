@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//probando git
 public class AppTienda {
      static void main(String[] args) {
          Scanner sc = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class AppTienda {
 
       try {
           do {
-              System.out.println("Bienvenido a Tienda...");
+              System.out.println("Bienvenido a Tienda..");
 
                   System.out.println("1. Añadir productos al inventario");
                   System.out.println("2. Vender productos, actualizando la cantidad en stock");
